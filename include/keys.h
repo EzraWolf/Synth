@@ -1,11 +1,15 @@
 
-// Allow push buttons to be used as keys through the PCA9555
-// i2c IO expander IC
 #ifndef _KEYS_H_
 #define _KEYS_H_
 
 #include <stdint.h>
 #include <stdbool.h>
+
+// Allow push buttons to be used as keys through the PCA9555
+// i2c IO expander IC
+//
+// There are plans to use a membrane keyboard
+// with velostat for velocity sensitive keys.
 
 // The PCA9555's pin names
 enum {

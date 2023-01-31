@@ -3,7 +3,8 @@
 #define _CONFIG_H_
 
 // Settings
-#define SAMPLING_RATE 40000 // 40kHz, 25 microseconds
+#define CONFIG_SAMPLING_RATE 40000 // 40kHz, 25 microseconds
+#define CONFIG_DISPLAY_USE_DMA false
 
 // SPI-0 PINS
 #define SPI_0_PIN_TX 0 // Transmit
@@ -32,12 +33,8 @@
 // I2S-1 PINS
 // NADA
 
-/*
-// PCA9555 PINS
-#define PCA9555_INP 0
-#define PCA9555_OUT 2
-#define PCA9555_INV 4
-#define PCA9555_CFG 6
-*/
+// PCA9555
+#define PCA9555_WR_ADDRESS 0x40
+#define PCA9555_RD_ADDRESS 0x41
 
 #endif // _CONFIG_H_

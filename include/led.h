@@ -2,7 +2,6 @@
 #ifndef _LED_H_
 #define _LED_H_
 
-// Imports
 #include <stdint.h>
 
 void FlashPin(uint8_t pin);
