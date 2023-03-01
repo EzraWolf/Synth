@@ -68,7 +68,7 @@ void PCA9555_polarity(uint16_t pin_states, bool retain_bus) {
  * @name PCA9555_write
  * @date 28-Feb-23
  * 
- * @brief Write to a specific register with a specific value
+ * @brief Write to a specific register a value
  * 
  * @param reg
  * @param val

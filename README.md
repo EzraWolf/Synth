@@ -21,7 +21,7 @@ Here is the summary:
  9. Once built, take your Pi Pico, hold down the `BOOTSEL` button while plugging it into your computer and you should see it pop up as a storage device. Now go into the `/build` folder and simply drag over the `j_cassette.uf2` file into the Pico's "drive" and it should start working
  10. Screw around with it and have fun
 
-**NOTE!!!** To compile this ever again you **need to open `Developer command prompt for VS2019` and type `code` for this to work and for your head to not explode**
+**NOTE!!!** To compile this ever again you **need to open `Developer command prompt for VS2019` as an administrator and type `code` for this to work**
 
 # Setup for linux users
 1. Install windows
