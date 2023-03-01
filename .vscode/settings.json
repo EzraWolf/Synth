@@ -1,6 +1,6 @@
 {
-    "C_Cpp.errorSquiggles": "enabledIfIncludesResolve",
     "files.associations": {
-        "stdint.h": "c"
+        "i2c.h": "c",
+        "binary_info.h": "c"
     }
 }

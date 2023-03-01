@@ -1,0 +1,7 @@
+
+#ifndef _INTERFACE_PCM5102_H_
+#define _INTERFACE_PCM5102_H_
+
+
+
+#endif // _INTERFACE_PCM5102_H_

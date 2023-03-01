@@ -1,7 +1,7 @@
 
-#ifndef _DISPLAY_OSC_H_
-#define _DISPLAY_OSC_H_
+#ifndef _DISPLAY_SCREENS_OSC_H_
+#define _DISPLAY_SCREENS_OSC_H_
 
 
 
-#endif // _DISPLAY_OSC_H_
+#endif // _DISPLAY_SCREENS_OSC_H_

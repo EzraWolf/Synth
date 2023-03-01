@@ -3,8 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${env:PICO_SDK_PATH}/**"
+                "${workspaceFolder}/**"
             ],
             "defines": [
                 "_DEBUG",
@@ -13,11 +12,10 @@
             ],
             "windowsSdkVersion": "10.0.22000.0",
             "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe",
-            "cStandard": "c11",
+            "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "${default}",
-            "configurationProvider": "ms-vscode.makefile-tools",
-            "forcedInclude": []
+            "intelliSenseMode": "windows-msvc-x64",
+            "configurationProvider": "ms-vscode.cmake-tools"
         }
     ],
     "version": 4
