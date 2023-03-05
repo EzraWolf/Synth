@@ -1,7 +1,9 @@
 {
     "files.associations": {
         "i2c.h": "c",
-        "binary_info.h": "c"
+        "binary_info.h": "c",
+        "dma.h": "c",
+        "st7789v2.pio.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
