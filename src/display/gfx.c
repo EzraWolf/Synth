@@ -17,17 +17,6 @@ void gfx_draw_line(uint16_t x_start, uint16_t y_start, uint16_t x_stop, uint16_t
 }
 
 // ================================================== //
-//                     Characters                     //
-// ================================================== //
-void gfx_print_char(uint16_t x_pos, uint16_t y_pos, char character, uint16_t color)  {
-
-}
-
-void gfx_print_string(uint16_t x_pos, uint16_t y_pos, const char *string, uint16_t color) {
-
-}
-
-// ================================================== //
 //                       Circles                      //
 // ================================================== //
 void gfx_draw_circle(uint16_t x_center, uint16_t y_center, uint16_t radius, uint16_t color) {
