@@ -17,7 +17,7 @@ pico_sdk_init()
 # These **may** cause annoying "undefined reference to main" errors...
 file(GLOB SOURCES src/*.c)
 file(GLOB SOURCES src/display/*.c)
-file(GLOB SOURCES src/display/screens*.c)
+file(GLOB SOURCES src/display/screens/*.c)
 file(GLOB SOURCES src/interface/*.c)
 
 add_executable(j_cassette ${SOURCES})
