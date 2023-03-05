@@ -1,6 +1,5 @@
 
 # This is a copy of <PICO_SDK_PATH>/external/pico_sdk_import.cmake
-
 # This can be dropped into an external project to help locate this SDK
 # It should be include()ed prior to project()
 
@@ -70,5 +69,4 @@ if (NOT EXISTS ${PICO_SDK_INIT_CMAKE_FILE})
 endif ()
 
 set(PICO_SDK_PATH ${PICO_SDK_PATH} CACHE PATH "Path to the Raspberry Pi Pico SDK" FORCE)
-
 include(${PICO_SDK_INIT_CMAKE_FILE})
