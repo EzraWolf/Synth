@@ -2,6 +2,8 @@
 #ifndef _INTERFACE_ST7789V2_H_
 #define _INTERFACE_ST7789V2_H_
 
+#include <stdint.h>
+
 // Do NOT change these
 #define ST7789V2_W 170
 #define ST7789V2_H 320
@@ -12,8 +14,13 @@
 // These are control register values
 // TODO
 
+// Command list
+// TODO
+
 // Setup and control functions
-void st7789v2_init();
-void st7789v2_clear();
+void ST7789V2_init(uint16_t background_color);
+void ST7789V2_clear();
+void ST7789V2_set_backlight(uint8_t brightness);
+void ST7789V2_send_command(uint8_t command);
 
 #endif // _INTERFACE_ST7789V2_H_
