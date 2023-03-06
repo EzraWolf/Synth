@@ -4,24 +4,28 @@
 
 #include <stdint.h>
 
-// Colors
-#define GFX_COLOR_WHITE         0xFFFF
-#define GFX_COLOR_LIGHT_GREY    0xCFFD
-#define GFX_COLOR_GREY          0x7FFF
-#define GFX_COLOR_DARK_GREY     0x3000
-#define GFX_COLOR_BLACK         0x0000
-#define GFX_COLOR_RED           0xFFFF
-#define GFX_COLOR_RED_ORANGE    0xFFFF
-#define GFX_COLOR_ORANGE        0xFFFF
-#define GFX_COLOR_ORANGE_YELLOW 0xFFFF
-#define GFX_COLOR_YELLOW        0xFFFF
-#define GFX_COLOR_YELLOW_GREEN  0xFFFF
-#define GFX_COLOR_GREEN         0xFFFF
-#define GFX_COLOR_GREEN_BLUE    0xFFFF
-#define GFX_COLOR_BLUE          0xFFFF
-#define GFX_COLOR_BLUE_PURPLE   0xFFFF
-#define GFX_COLOR_PURPLE        0xFFFF
-#define GFX_COLOR_PURPLE_RED    0xFFFF
+// Useful 565 color picker:
+// https://rgbcolorpicker.com/565
+//
+// Tells you how to work with 16b colors in C:
+// https://www.barth-dev.de/online/rgb565-color-picker/
+#define GFX_COLOR_WHITE         0xF7BE
+#define GFX_COLOR_LIGHT_GREY    0xE71C
+#define GFX_COLOR_GREY          0xAD75
+#define GFX_COLOR_DARK_GREY     0x8410
+#define GFX_COLOR_BLACK         0x4208
+#define GFX_COLOR_RED           0xFA28
+#define GFX_COLOR_RED_ORANGE    0xFAA7
+#define GFX_COLOR_ORANGE        0xFBA7
+#define GFX_COLOR_ORANGE_YELLOW 0xFE27
+#define GFX_COLOR_YELLOW        0xF786
+#define GFX_COLOR_YELLOW_GREEN  0xDFE7
+#define GFX_COLOR_GREEN         0x7FE7
+#define GFX_COLOR_GREEN_BLUE    0x3FF3
+#define GFX_COLOR_BLUE          0x3F5F
+#define GFX_COLOR_BLUE_PURPLE   0x8B7F
+#define GFX_COLOR_PURPLE        0xE35F
+#define GFX_COLOR_PURPLE_RED    0xFAB3
 
 // Base Functions
 void gfx_fill                     (uint16_t color);
