@@ -12,7 +12,9 @@
  * 
  * @brief Set the PCA9555's address and which pins are inputs and outputs
  * 
- * @param pin_states **TREAT THIS VALUE AS BINARY**
+ * @param uint16_t pin_states **TREAT THIS VALUE AS BINARY**
+ * @param bool retain_bus If true, it means you are still continuously writing to the PCA9555.
+ *  You must return false if you are performing another task before writing to it again.
  * @return void
  */
 void PCA9555_init(uint16_t pin_states, bool retain_bus) {
@@ -44,8 +46,9 @@ void PCA9555_init(uint16_t pin_states, bool retain_bus) {
  * 
  * @brief I have literally no idea what this is supposed to do
  * 
- * @param pin_states 
- * @param retain_bus
+ * @param uint16_t pin_states 
+ * @param bool retain_bus If true, it means you are still continuously writing to the PCA9555.
+ *  You must return false if you are performing another task before writing to it again.
  * @return void 
  */
 void PCA9555_polarity(uint16_t pin_states, bool retain_bus) {
@@ -70,10 +73,10 @@ void PCA9555_polarity(uint16_t pin_states, bool retain_bus) {
  * 
  * @brief Write to a specific register a value
  * 
- * @param reg
- * @param val
- * @param val_bytes
- * @param retain_bus If true, it means you are still continuously writing to the PCA9555.
+ * @param uint8_t reg
+ * @param uint8_t val
+ * @param uint8_t val_bytes
+ * @param bool retain_bus If true, it means you are still continuously writing to the PCA9555.
  *  You must return false if you are performing another task before writing to it again.
  * @return void
  */
@@ -102,8 +105,9 @@ void PCA9555_write(uint8_t reg, uint8_t val, uint8_t val_bytes, bool retain_bus)
  * 
  * @brief Write to both PORT0_OUTPUT and PORT1_OUTPUT to set all pins
  * 
- * @param pin_values
- * @param retain_bus
+ * @param uint16_t pin_values
+ * @param bool retain_bus If true, it means you are still continuously writing to the PCA9555.
+ *  You must return false if you are performing another task before writing to it again.
  * @return void
  */
 void PCA9555_write_all_pins(uint16_t pin_values, bool retain_bus) {
@@ -117,8 +121,8 @@ void PCA9555_write_all_pins(uint16_t pin_values, bool retain_bus) {
  * 
  * @brief Read a specific register
  * 
- * @param reg
- * @param retain_bus If true, it means you are still continuously writing to the PCA9555.
+ * @param uint8_t reg
+ * @param bool retain_bus If true, it means you are still continuously writing to the PCA9555.
  *  You must return false if you are performing another task before writing to it again.
  * @return uint8_t Returns the value read
  */
