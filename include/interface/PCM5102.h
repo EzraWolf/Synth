@@ -4,7 +4,7 @@
 
 #include <stdint.h>
 
-void PCM5102_init(uint8_t bit_resolution, bool is_mono);
+void PCM5102_init(bool is_mono); // Is 32b audio resolution by default
 void PCM5102_update_freq(uint32_t freq);
 
 #endif // _INTERFACE_PCM5102_H_
