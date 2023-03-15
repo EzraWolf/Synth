@@ -1,0 +1,7 @@
+
+#ifndef _INTERFACE_W25Q64_H_
+#define _INTERFACE_W25Q64_H_
+
+
+
+#endif // _INTERFACE_W25Q64_H_
