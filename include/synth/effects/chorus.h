@@ -1,0 +1,7 @@
+
+#ifndef _SYNTH_EFFECTS_CHORUS_H_
+#define _SYNTH_EFFECTS_CHORUS_H_
+
+
+
+#endif // _SYNTH_EFFECTS_CHORUS_H_
