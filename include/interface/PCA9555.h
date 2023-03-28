@@ -47,7 +47,7 @@
 // Pins PORT0_3 to PORT0_5 drive CD4051_1, it cycles through and reads 8 input potentiometers
 // Pins PORT0_6 to PORT1_0 drive CD4051_2, it cycles through and reads 8 input buttons
 void     PCA9555_init           (uint16_t pin_states, bool retain_bus);
-void     PCA9555_polarity       (uint16_t pin_states, bool retain_bus);
+void     PCA9555_set_polarity   (uint16_t pin_states, bool retain_bus);
 void     PCA9555_write          (uint8_t reg, uint8_t val, uint8_t val_bytes, bool retain_bus);
 void     PCA9555_write_all_pins (uint16_t pin_values, bool retain_bus);
 uint8_t  PCA9555_read           (uint8_t  reg, bool retain_bus);

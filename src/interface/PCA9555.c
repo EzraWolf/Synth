@@ -51,7 +51,7 @@ void PCA9555_init(uint16_t pin_states, bool retain_bus) {
  *  You must return false if you are performing another task before writing to it again.
  * @return void 
  */
-void PCA9555_polarity(uint16_t pin_states, bool retain_bus) {
+void PCA9555_set_polarity(uint16_t pin_states, bool retain_bus) {
     PCA9555_write(
         PCA9555_PORT0_POLARITY,
         (uint8_t)(pin_states & 0xFF),
