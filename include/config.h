@@ -9,6 +9,7 @@
 // -=========================-
 //          SETTINGS         
 // -=========================-
+#define CONFIG_PCM5102_USE_DMA true
 #define CONFIG_DISPLAY_USE_DMA false
 
 // Audio
@@ -22,7 +23,7 @@
 #define CONFIG_AUDIO_STEREO        2
 
 // Devices
-#define PCA9555_PORT I2C_0
+#define CONFIG_PCA9555_PORT I2C_0
 
 
 // -=========================-
@@ -47,32 +48,32 @@
 //    (Only on SPI_1 because its closest to the TFT on the breadboard)
 
 // **NOTE** These are the GPIO numbers
-#define SPI_1_PIN_CK 10 // Clock
-#define SPI_1_PIN_TX 11 // Transmit
-#define SPI_1_PIN_RX 12 // Receive
+#define CONFIG_SPI_1_PIN_CK 10 // Clock
+#define CONFIG_SPI_1_PIN_TX 11 // Transmit
+#define CONFIG_SPI_1_PIN_RX 12 // Receive
 
-#define ST7789V2_CS  13 // ST7789 Chip-select
-#define ST7789V2_DC  14 // ST7789 Data command
-#define ST7789V2_RS  15 // ST7789 Reset
+#define CONFIG_ST7789V2_CS  13 // ST7789 Chip-select
+#define CONFIG_ST7789V2_DC  14 // ST7789 Data command
+#define CONFIG_ST7789V2_RS  15 // ST7789 Reset
 
 
 // -=========================-
 //            I2C_0           
 // -=========================-
-#define I2C_0 i2c0 // Port
+#define CONFIG_I2C_0 i2c0 // Port
 
 // Devices connected to I2C_0:
 //  - PCA9555 16b IO expander
 
 // **NOTE** These are the GPIO numbers
-#define I2C_0_SDA 20   // Data
-#define I2C_0_SCL 21   // Clock
+#define CONFIG_I2C_0_SDA 20   // Data
+#define CONFIG_I2C_0_SCL 21   // Clock
 
 
 // -=========================-
 //            I2C_1           
 // -=========================-
-#define I2C_1 i2c1 // Port
+#define CONFIG_I2C_1 i2c1 // Port
 
 // Devices connected to I2C_1:
 //  - Nada
@@ -90,8 +91,8 @@
 //  - PCM5102 Audio DAC (Accepts up to 32bit audio data)
 
 // **NOTE** These are the GPIO numbers
-#define I2S_0_DIN 18 // Audio data input
-#define I2S_0_BCK 16 // Audio data bit  clock
-#define I2S_0_LCK 17 // Left-right word clock
+#define CONFIG_I2S_0_DIN 18 // Audio data input
+#define CONFIG_I2S_0_BCK 16 // Audio data bit  clock
+#define CONFIG_I2S_0_LCK 17 // Left-right word clock
 
 #endif // _CONFIG_H_
