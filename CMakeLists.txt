@@ -16,6 +16,8 @@ pico_sdk_init()
 
 # These **may** cause annoying "undefined reference to main" errors...
 file(GLOB SOURCES src/*.c)
+file(GLOB SOURCES src/synth/*.c)
+file(GLOB SOURCES src/synth/effects/*.c)
 file(GLOB SOURCES src/display/*.c)
 file(GLOB SOURCES src/display/screens/*.c)
 file(GLOB SOURCES src/interface/*.c)
@@ -47,8 +49,12 @@ target_sources(j_cassette PRIVATE src/main.c)
 target_include_directories(j_cassette PUBLIC include)
 target_link_libraries(j_cassette PRIVATE
     pico_stdlib
-    hardware_pio 
+    pico_sync
+    pico_util_buffer
+    hardware_pio
+    hardware_dma 
     hardware_i2c
+    hardware_spi
 )
 
 # Create the the UF2 and HEX files

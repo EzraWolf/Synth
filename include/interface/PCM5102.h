@@ -4,6 +4,9 @@
 
 #include <stdint.h>
 
+#define PCM5102_PIO_STATE_MACHINE 0x00
+
+
 void PCM5102_init(bool is_mono); // Is 32b audio resolution by default
 void PCM5102_update_freq(uint32_t freq_l, uint32_t freq_r);
 void PCM5102_update_vol(uint8_t vol);

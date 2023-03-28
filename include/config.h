@@ -3,14 +3,25 @@
 #define _CONFIG_H_
 
 #include "hardware/i2c.h"
+#include "hardware/spi.h"
 
 
 // -=========================-
 //          SETTINGS         
 // -=========================-
-#define CONFIG_SAMPLING_RATE 48 * 1000 // 48kHz, 20.8333... microseconds
 #define CONFIG_DISPLAY_USE_DMA false
 
+// Audio
+#define CONFIG_AUDIO_SAMPLE_RATE   48 * 1000 // 48kHz, 20.8333... microseconds
+#define CONFIG_AUDIO_SAMPLE_STRIDE 8         // 8 bytes per sample
+#define CONFIG_AUDIO_CHANNELS      1         // Mono
+#define CONFIG_AUDIO_BITS          32        // 32bit audio
+#define CONFIG_AUDIO_DMA_CHANNEL   0         // DMA channel 0
+
+#define CONFIG_AUDIO_MONO          1
+#define CONFIG_AUDIO_STEREO        2
+
+// Devices
 #define PCA9555_PORT I2C_0
 
 
@@ -48,7 +59,7 @@
 // -=========================-
 //            I2C_0           
 // -=========================-
-#define I2C_0     i2c0 // Port
+#define I2C_0 i2c0 // Port
 
 // Devices connected to I2C_0:
 //  - PCA9555 16b IO expander
@@ -61,7 +72,7 @@
 // -=========================-
 //            I2C_1           
 // -=========================-
-#define I2C_1     i2c1 // Port
+#define I2C_1 i2c1 // Port
 
 // Devices connected to I2C_1:
 //  - Nada

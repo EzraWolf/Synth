@@ -1,9 +1,14 @@
 
+#include <stdio.h>
 #include <stdint.h>
 #include "hardware/pio.h"
-#include "hardware/structs/dma.h"
+#include "hardware/dma.h"
+#include "hardware/irq.h"
+#include "hardware/sync.h"
+#include "pico/util/buffer.h"
 
 // Local
+#include "config.h"
 #include "pio/PCM5102.pio.h" // The "compiled" PCM5102.pio file
 
 /**
@@ -17,7 +22,11 @@
  * @param bool is_mono
  * @return void
  */
-void PCM5102_init(bool is_mono) {
+void PCM5102_init(PIO bool is_mono) {
+
+    uint func = __CONCAT(GPIO_FUNC_PIO, PICO_AUDIO_I2S_PIO);
+    gpio_set_function(I2S_0_DIN, func);
+    gpio_set_function(I2S_0_LCK, func);
 
 }
 

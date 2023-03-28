@@ -10,6 +10,8 @@
 #define ST7789V2_W_MIDDLE 85
 #define ST7789V2_H_MIDDLE 160
 
+#define ST7789V2_PIO_STATE_MACHINE 0x01
+
 // Also do NOT change these
 // These are control register values
 // TODO
