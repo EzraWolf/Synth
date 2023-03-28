@@ -22,11 +22,7 @@
  * @param bool is_mono
  * @return void
  */
-void PCM5102_init(PIO bool is_mono) {
-
-    uint func = __CONCAT(GPIO_FUNC_PIO, PICO_AUDIO_I2S_PIO);
-    gpio_set_function(I2S_0_DIN, func);
-    gpio_set_function(I2S_0_LCK, func);
+void PCM5102_init(uint8_t audio_channel_ct) {
 
 }
 

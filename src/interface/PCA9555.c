@@ -80,7 +80,7 @@ void PCA9555_set_polarity(uint16_t pin_states, bool retain_bus) {
  *  You must return false if you are performing another task before writing to it again.
  * @return void
  */
-void PCA9555_write(uint8_t reg, uint8_t val, uint8_t val_bytes, bool retain_bus) {
+void PCA9555_write_reg(uint8_t reg, uint8_t val, uint8_t val_bytes, bool retain_bus) {
     i2c_write_blocking(
         PCA9555_PORT,
         PCA9555_BASE_ADDR,
@@ -126,7 +126,7 @@ void PCA9555_write_all_pins(uint16_t pin_values, bool retain_bus) {
  *  You must return false if you are performing another task before writing to it again.
  * @return uint8_t Returns the value read
  */
-uint8_t PCA9555_read(uint8_t reg, bool retain_bus) {
+uint8_t PCA9555_read_reg(uint8_t reg, bool retain_bus) {
     uint8_t register_contents = 0;
 
     i2c_write_blocking(
