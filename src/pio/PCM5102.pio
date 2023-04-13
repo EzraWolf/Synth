@@ -33,9 +33,10 @@
 ; Modified by Junietta, 2023
 ; Clarified LRCK and BCK comments on lines 41 and 42
 ; Removed the gaps in this current comment block to keep things tidy
-; Renamed "audio_i2s_program_init(...)" to "PCM5102_pio_init"
+; Renamed "audio_i2s_program_init(...)" to "PCM5102_i2s_pio_init"
+; Renamed ".program audio_i2s" to ".program PCM5102_i2s_pio"
 
-.program audio_i2s
+.program PCM5102_i2s_pio
 .side_set 2
 
 ; 0bX- is LRCK
@@ -55,9 +56,8 @@ public entry_point:
     mov x, isr        side 0b01
 
 % c-sdk {
-
-static inline void PCM5102_pio_init(PIO pio, uint sm, uint offset, uint data_pin, uint clock_pin_base, uint res_bits) {
-    pio_sm_config sm_config = audio_i2s_program_get_default_config(offset);
+static inline void PCM5102_i2s_pio_init(PIO pio, uint sm, uint offset, uint data_pin, uint clock_pin_base, uint res_bits) {
+    pio_sm_config sm_config = PCM5102_i2s_pio_program_get_default_config(offset);
 
     sm_config_set_out_pins(&sm_config, data_pin, 1);
     sm_config_set_sideset_pins(&sm_config, clock_pin_base);
@@ -79,5 +79,4 @@ static inline void PCM5102_pio_init(PIO pio, uint sm, uint offset, uint data_pin
 
     pio_sm_exec(pio, sm, pio_encode_jmp(offset + audio_i2s_offset_entry_point));
 }
-
 %}

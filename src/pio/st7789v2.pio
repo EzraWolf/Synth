@@ -1,4 +1,6 @@
 
+.program ST7789V2_PIO
+
 % c-sdk {
 
 %}
